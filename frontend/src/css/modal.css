@@ -1,0 +1,460 @@
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 1% auto;
+  margin-left: 20% !important;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilo para a tabela */
+table {
+  width: 100%;
+  border-color: #dee2e6;
+  text-decoration: none;
+}
+
+/* Estilo para o cabeçalho da tabela */
+th {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 1px 2px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 12px;
+  color: #212529;
+}
+
+/* Estilo para as células da tabela */
+td {
+  border: 1px solid #dee2e6;
+  padding: 2px 6px;
+  font-size: 12px;
+
+}
+
+/* Estilo para as células da tabela quando passa o mouse */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Estilo para o botão de excluir */
+button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para o botão de excluir quando passa o mouse */
+button:hover {
+  background-color: #c82333;
+}
+
+.clientesform {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clientesform .form-group {
+  margin-bottom: 15px;
+  margin-left: 8px;
+  flex-basis: calc(50% - 10px);
+  /* 50% menos a margem entre as colunas */
+}
+
+.clientesform label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.clientesform input[type="text"],
+.clientesform input[type="email"],
+.clientesform input[type="tel"],
+.clientesform input[type="date"],
+.clientesform button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.clientesform button[type="submit"] {
+  margin-top: 15px;
+  background-color: #aa0000 !important;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clientesform button[type="submit"]:hover {
+  background-color: #000000 !important;
+}
+
+/* Estilos para o select */
+.clientesform select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+  /* Remove a aparência padrão do sistema operacional */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Ícone de seta para baixo */
+.clientesform select::after {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.clientesform select:focus {
+  outline: none;
+  border-color: #aa0000;
+  /* Cor da borda ao focar */
+}
+
+/* Estilos para as opções do select */
+.clientesform select option {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Estilos para o formulário de cadastro de login */
+.cadastroLoginForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Distribui os elementos igualmente */
+}
+
+.cadastroLoginForm .form-group {
+  flex-basis: calc(50% - 10px);
+  /* Largura de 50% menos a margem */
+  margin-bottom: 20px;
+  /* Espaço abaixo */
+}
+
+.cadastroLoginForm .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cadastroLoginForm .form-control {
+  width: 100%;
+  /* Largura total */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cadastroLoginForm .form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cadastroLoginForm .form-button:hover {
+  background-color: #000000;
+}
+
+/* Estilos para o formulário de cadastro de produtos */
+.cadastroProdutosForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Distribui os elementos igualmente */
+}
+
+.cadastroProdutosForm .form-group {
+  flex-basis: calc(50% - 10px);
+  /* Largura de 50% menos a margem */
+  margin-bottom: 20px;
+  /* Espaço abaixo */
+}
+
+.cadastroProdutosForm .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cadastroProdutosForm .form-control {
+  width: 100%;
+  /* Largura total */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cadastroProdutosForm .form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cadastroProdutosForm .form-button:hover {
+  background-color: #000000;
+}
+
+/* Estilos para o formulário de cadastro de fornecedores */
+.cadastroFornecedoresForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Distribui os elementos igualmente */
+}
+
+.cadastroFornecedoresForm .form-group {
+  flex-basis: calc(50% - 10px);
+  /* Largura de 50% menos a margem */
+  margin-bottom: 20px;
+  /* Espaço abaixo */
+}
+
+.cadastroFornecedoresForm .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cadastroFornecedoresForm .form-control {
+  width: 100%;
+  /* Largura total */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cadastroFornecedoresForm .form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cadastroFornecedoresForm .form-button:hover {
+  background-color: #000000;
+}
+
+/* Estilos para o formulário de cadastro de histórico de clientes */
+.cadastroClientesForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cadastroClientesForm .form-group {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.cadastroClientesForm .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cadastroClientesForm .form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cadastroClientesForm .form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cadastroClientesForm .form-button:hover {
+  background-color: #000;
+}
+
+.controleEstoqueForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.controleEstoqueForm .form-group {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.controleEstoqueForm .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.controleEstoqueForm .form-control {
+  width: calc(100% - 10px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.controleEstoqueForm .form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controleEstoqueForm .form-button:hover {
+  background-color: #000;
+}
+
+.registroVendasForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.registroVendasForm .form-group {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.registroVendasForm .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.registroVendasForm .form-control {
+  width: calc(100% - 10px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.registroVendasForm .form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registroVendasForm .form-button:hover {
+  background-color: #000;
+}

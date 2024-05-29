@@ -1,0 +1,237 @@
+/* Login.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin: 50px auto;
+}
+
+.body {
+    position: relative;
+    width: 900px;
+    height: 500px;
+    margin: 20px auto;
+    border: 1px solid #dddd;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 6%;
+    background: #fff !important;
+}
+
+.primeiroCarrosel {
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.segundoCarrosel {
+    width: 103%;
+    height: 2%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.terceiroCarrosel {
+    width: 100%;
+    height: 2%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* .quartoCarrosel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.box-1,
+.box-2 {
+    width: 50%;
+}
+
+.h-1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+.container .box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: #615f5fdd;
+}
+
+.box:active,
+.box:visited {
+    border: 2px solid #ee82ee;
+}
+
+
+
+.btn.btn-primary .fas.fa-chevron-right {
+    font-size: 12px;
+}
+
+.footer .p-color {
+    color: #b81414;
+}
+
+.footer.text-muted {
+    font-size: 10px;
+}
+
+
+@media (max-width:767px) {
+    body {
+        padding: 10px;
+    }
+
+    .body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box-1 {
+        width: 100%;
+    }
+    .box-2{
+        margin-left: 22%;
+    }
+}
+
+
+
+/* forms */
+
+.titulo {
+    text-align: center; 
+    margin-top: 30px;
+}
+
+.subtitulo {
+    font-size: 9px;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.login-input:hover {
+    border-color: #b81414;
+}
+
+.login-input:focus {
+    outline: none; /* Removendo a borda de foco padrão */
+    box-shadow: 0 0 5px #b81414; /* Adicionando uma sombra quando o campo está em foco */
+}
+
+.login-button {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b81414; 
+    color: #fff; 
+    font-size: 16px;
+    cursor: pointer; 
+    margin-top: 20px;
+}
+
+
+
+/* Estilização do hover */
+.login-button:hover {
+    background-color: black;
+   
+}
+
+
+
+.box-2 {
+    padding: 4px;
+    margin-bottom: 40px;
+}
+
+
+
+/* imagem */
+
+.logoStyle{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.mt-auto {
+    margin-top: 4px;
+    text-align: center;
+}
+
+
+/* alert */
+
+/* custom-alert.css */
+
+/* Estilizando o fundo do alerta */
+.swal2-popup {
+    background-color: white !important; /* Cor de fundo do alerta */
+  }
+  
+  /* Estilizando o título do alerta */
+  .swal2-title {
+    color: black !important; /* Cor do título */
+  }
+  
+  /* Estilizando o texto do alerta */
+  .swal2-content {
+    color: white !important; /* Cor do texto */
+  }
+  
+  /* Estilizando o botão de confirmação */
+  .swal2-confirm {
+    background-color: #b81414  !important; /* Nova cor de fundo do botão */
+    color: white !important; /* Cor do texto do botão */
+  }
+  
+  /* Estilizando o botão de cancelamento */
+  .swal2-cancel {
+    background-color: #ffffff !important; /* Nova cor de fundo do botão */
+    color: #b81414 !important; /* Cor do texto do botão */
+  }
+  
+  /* Estilizando a borda do formulário */
+.swal2-popup .swal2-content {
+    border: 2px solid #b81414 !important; /* Cor da borda */
+  }
+
