@@ -89,7 +89,7 @@ function DashboardControleEstoque() {
         <img className="brand" src={logoGaroto} />
         <ul className="side-menu top">
           <li className="active">
-            <Link to="/">
+            <Link to="/dashboard">
               <RiDashboardFill />
               <span className="text">Painel</span>
             </Link>
@@ -131,12 +131,6 @@ function DashboardControleEstoque() {
             </Link>
           </li>
           <li>
-            <Link to="/registroVendas">
-              <GiMoneyStack />
-              <span className="text">Registro de Vendas</span>
-            </Link>
-          </li>
-          <li>
             <Link to="/cadastroFuncionarios">
               <FaPeopleLine />
               <span className="text">Cadastro de Funcionarios</span>
@@ -162,12 +156,6 @@ function DashboardControleEstoque() {
           </li>
         </ul>
         <ul className="side-menu">
-          <li>
-            <a href="#">
-              <BiSolidCog />
-              <span className="text">Configurações</span>
-            </a>
-          </li>
           <li>
             <a href="/" className="logout">
               <CiLogout />
@@ -234,7 +222,7 @@ function DashboardControleEstoque() {
                 </li>
                 <li><RiArrowRightSLine /></li>
                 <li>
-                  <a className="active" href="#">Home</a>
+                  <a className="active" href="#">Controle de Estoque</a>
                 </li>
               </ul>
             </div>
@@ -248,119 +236,71 @@ function DashboardControleEstoque() {
             <li>
               <FaCalendarCheck />
               <span className="text">
-                <h3>1020</h3>
-                <p>New Order</p>
+                <h3>28/05</h3>
+                <p>Calendário</p>
               </span>
             </li>
             <li>
               <BiSolidGroup />
               <span className="text">
-                <h3>2834</h3>
-                <p>Visitors</p>
+                <h3>130 mil</h3>
+                <p>Funcionários</p>
               </span>
             </li>
             <li>
               <AiFillDollarCircle />
               <span className="text">
-                <h3>$2543</h3>
-                <p>Total Sales</p>
+                <h3>$1498000</h3>
+                <p>Vendas Mensais</p>
               </span>
             </li>
           </ul>
 
           <div className="table-data">
             <div className="order">
-              <div className="head">
-                <h3>Recent Orders</h3>
-                <IoIosSearch />
-                <IoFilterOutline />
-              </div>
               <table>
-                <thead>
-                  <tr>
-                    <th>User</th>
-                    <th>Date Order</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                </tbody>
+                <div className="head">
+                  <h3>Controle de Estoque</h3>
+                  <HiOutlinePlusSmall />
+                  <IoFilterOutline />
+                </div>
+                <ul className="todo-list">
+                  <div>
+                    <button id="myBtn"><FaCirclePlus /></button>
+                    <div id="myModal" className="modal">
+                      <div className="modal-content">
+                        <span className="close">&times;</span>
+                        <ControleEstoqueForm />
+                      </div>
+                    </div>
+                  </div>
+                  <TabelaControleEstoque />
+                </ul>
               </table>
             </div>
             <div className="todo">
               <div className="head">
-                <h3>Todos</h3>
+                <h3>Tarefas ✔️</h3>
                 <HiOutlinePlusSmall />
                 <IoFilterOutline />
               </div>
               <ul className="todo-list">
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Conferência de Entrega</p>
                   <LuMoreVertical />
                 </li>
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Registro de Entrada</p>
                   <LuMoreVertical />
                 </li>
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Inspeção de Qualidade</p>
                   <LuMoreVertical />
                 </li>
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Controle de Prazos</p>
                   <LuMoreVertical />
                 </li>
-              </ul>
-            </div>
-            <div className="todo">
-              <div className="head">
-                <h3>Tabela com Modal</h3>
-                <HiOutlinePlusSmall />
-                <IoFilterOutline />
-              </div>
-              <ul className="todo-list">
-                <div>
-                  <button id="myBtn"><FaCirclePlus /></button>
-                  <div id="myModal" className="modal">
-                    <div className="modal-content">
-                      <span className="close">&times;</span>
-                      <ControleEstoqueForm />
-                    </div>
-                  </div>
-                </div>
-                <TabelaControleEstoque />
               </ul>
             </div>
           </div>

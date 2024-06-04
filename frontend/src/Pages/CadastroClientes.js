@@ -19,14 +19,12 @@ import avatar8 from "../images/avatar-8.avif";
 import { LuMoreVertical } from "react-icons/lu";
 import { IoFilterOutline } from "react-icons/io5";
 import { HiOutlinePlusSmall } from "react-icons/hi2";
-import { IoIosSearch } from "react-icons/io";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { BiSolidGroup } from "react-icons/bi";
 import { FaCalendarCheck } from "react-icons/fa6";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { FaBell } from "react-icons/fa";
-import { BiSolidCog } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { BiSolidMessageDots } from "react-icons/bi";
 import { BiSolidDoughnutChart } from "react-icons/bi";
@@ -34,15 +32,13 @@ import { GiShoppingBag } from "react-icons/gi";
 import { RiDashboardFill } from "react-icons/ri";
 import { AiFillHdd } from "react-icons/ai";
 import { FaPeopleCarry } from "react-icons/fa";
-import { GiMoneyStack } from "react-icons/gi";
 import { FaPeopleLine } from "react-icons/fa6";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { GiReceiveMoney } from "react-icons/gi";
 import { FaClipboardList } from "react-icons/fa";
 
-import ContasAReceber from "../Pages/ContasAReceber.js"
-import Grafico from "../Pages/Grafico.js";
-import TabelaHistoricoClientes from '../Components/TabelaHistoricoClientes';
+import Grafico from "../Pages/GraficoCadastroClientes.js";
+
 const avatars = [User, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
 const notifications = [
   { id: 1, message: 'Atualização' },
@@ -90,7 +86,7 @@ function DashboardCadastroClientes() {
         <img className="brand" src={logoGaroto} />
         <ul className="side-menu top">
           <li className="active">
-            <Link to="/">
+            <Link to="/dashboard">
               <RiDashboardFill />
               <span className="text">Painel</span>
             </Link>
@@ -132,12 +128,6 @@ function DashboardCadastroClientes() {
             </Link>
           </li>
           <li>
-            <Link to="/registroVendas">
-              <GiMoneyStack />
-              <span className="text">Registro de Vendas</span>
-            </Link>
-          </li>
-          <li>
             <Link to="/cadastroFuncionarios">
               <FaPeopleLine />
               <span className="text">Cadastro de Funcionarios</span>
@@ -163,12 +153,6 @@ function DashboardCadastroClientes() {
           </li>
         </ul>
         <ul className="side-menu">
-          <li>
-            <a href="#">
-              <BiSolidCog />
-              <span className="text">Configurações</span>
-            </a>
-          </li>
           <li>
             <a href="/" className="logout">
               <CiLogout />
@@ -236,7 +220,7 @@ function DashboardCadastroClientes() {
                 </li>
                 <li><RiArrowRightSLine /></li>
                 <li>
-                  <a className="active" href="#">Home</a>
+                  <a className="active" href="#">Cadastro de Clientes</a>
                 </li>
               </ul>
             </div>
@@ -250,105 +234,60 @@ function DashboardCadastroClientes() {
             <li>
               <FaCalendarCheck />
               <span className="text">
-                <h3>1020</h3>
-                <p>New Order</p>
+                <h3>28/05</h3>
+                <p>Calendário</p>
               </span>
             </li>
             <li>
               <BiSolidGroup />
               <span className="text">
-                <h3>2834</h3>
-                <p>Visitors</p>
+                <h3>130 mil</h3>
+                <p>Funcionários</p>
               </span>
             </li>
             <li>
               <AiFillDollarCircle />
               <span className="text">
-                <h3>$2543</h3>
-                <p>Total Sales</p>
+                <h3>$1498000</h3>
+                <p>Vendas Mensais</p>
               </span>
             </li>
           </ul>
 
           <div className="table-data">
             <div className="order">
-              <div className="head">
-                <h3>Recent Orders</h3>
-                <IoIosSearch />
-                <IoFilterOutline />
-              </div>
               <table>
-                <thead>
-                  <tr>
-                    <th>User</th>
-                    <th>Date Order</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img src={User} alt="User" />
-                      <p>John Doe</p>
-                    </td>
-                    <td>01-10-2021</td>
-                    <td><span className="status completed">Completed</span></td>
-                  </tr>
-                </tbody>
+                <Grafico />
               </table>
             </div>
             <div className="todo">
               <div className="head">
-                <h3>Todos</h3>
+                <h3>Tarefas ✔️</h3>
                 <HiOutlinePlusSmall />
                 <IoFilterOutline />
               </div>
               <ul className="todo-list">
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Informações Demográficas</p>
                   <LuMoreVertical />
                 </li>
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Registro de Interactions</p>
                   <LuMoreVertical />
                 </li>
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Análise de Dados</p>
                   <LuMoreVertical />
                 </li>
                 <li className="completed">
-                  <p>Todo List</p>
+                  <p>Segmentação de Clientes</p>
                   <LuMoreVertical />
                 </li>
               </ul>
             </div>
             <div className="todo">
               <div className="head">
-                <h3>Tabela com Modal</h3>
+                <h3>Cadastro de Clientes</h3>
                 <HiOutlinePlusSmall />
                 <IoFilterOutline />
               </div>

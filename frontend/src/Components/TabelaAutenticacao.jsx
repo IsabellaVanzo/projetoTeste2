@@ -37,7 +37,6 @@ const TabelaLogin = () => {
             <th>ID</th>
             <th>Email</th>
             <th>Senha</th>
-            <th>Ação</th>
             {/* Adicione mais colunas, se necessário */}
           </tr>
         </thead>
@@ -47,14 +46,6 @@ const TabelaLogin = () => {
               <td>{cadastroLogin.id}</td>
               <td>{cadastroLogin.email}</td>
               <td>{cadastroLogin.senha}</td>
-              <td>
-                <button
-                  variant="danger"
-                  onClick={() => handleExcluirUsuario(cadastroLogin.id)}
-                >
-                  Excluir
-                </button>
-              </td>
               {/* Renderizar outras colunas, se necessário */}
             </tr>
           ))}

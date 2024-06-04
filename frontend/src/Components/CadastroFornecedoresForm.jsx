@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-
 const CadastroFornecedoresForm = () => {
   const [formData, setFormData] = useState({
     nomeEmpresa: '',
@@ -40,7 +39,6 @@ const CadastroFornecedoresForm = () => {
         segmentoAtuacao: '',
         status: ''
       });
-      window.location.reload(false);
     } catch (error) {
       console.error('Erro ao criar cadastroFornecedores', error);
       await Swal.fire({
@@ -63,7 +61,7 @@ const CadastroFornecedoresForm = () => {
       </div>
       <div className="form-group">
         <label htmlFor="cnpj" className="form-label">CNPJ:</label>
-        <input type="number" name="cnpj" placeholder="CNPJ" className="form-control" value={formData.cnpj} onChange={handleChange} />
+        <input type="text" name="cnpj" placeholder="CNPJ" className="form-control" value={formData.cnpj} onChange={handleChange} />
       </div>
       <div className="form-group">
         <label htmlFor="email" className="form-label">Email:</label>

@@ -24,7 +24,6 @@ import { FaCalendarCheck } from "react-icons/fa6";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { FaBell } from "react-icons/fa";
-import { BiSolidCog } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { BiSolidMessageDots } from "react-icons/bi";
 import { BiSolidDoughnutChart } from "react-icons/bi";
@@ -32,14 +31,13 @@ import { GiShoppingBag } from "react-icons/gi";
 import { RiDashboardFill } from "react-icons/ri";
 import { AiFillHdd } from "react-icons/ai";
 import { FaPeopleCarry } from "react-icons/fa";
-import { GiMoneyStack } from "react-icons/gi";
 import { FaPeopleLine } from "react-icons/fa6";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { GiReceiveMoney } from "react-icons/gi";
 import { FaClipboardList } from "react-icons/fa";
 
 import Grafico from "../Pages/Grafico.js";
-import TabelaHistoricoClientes from '../Components/TabelaHistoricoClientes';
+import RegistroVendas from '../Pages/RegistroVendas.js';
 const avatars = [User, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
 const notifications = [
     { id: 1, message: 'Atualização' },
@@ -72,13 +70,13 @@ function Dashboard() {
     };
     const loadModalScript = async () => {
         try {
-          const module = await import('../data/jsModal.js');
-          module.default();
+            const module = await import('../data/jsModal.js');
+            module.default();
         } catch (error) {
-          console.error("Failed to load modal script:", error);
+            console.error("Failed to load modal script:", error);
         }
-      };
-      loadModalScript();
+    };
+    loadModalScript();
 
     return (
         <div>
@@ -87,7 +85,7 @@ function Dashboard() {
                 <img className="brand" src={logoGaroto} />
                 <ul className="side-menu top">
                     <li className="active">
-                        <Link to="/">
+                        <Link to="/dashboard">
                             <RiDashboardFill />
                             <span className="text">Painel</span>
                         </Link>
@@ -129,12 +127,6 @@ function Dashboard() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/registroVendas">
-                            <GiMoneyStack />
-                            <span className="text">Registro de Vendas</span>
-                        </Link>
-                    </li>
-                    <li>
                         <Link to="/cadastroFuncionarios">
                             <FaPeopleLine />
                             <span className="text">Cadastro de Funcionarios</span>
@@ -160,12 +152,6 @@ function Dashboard() {
                     </li>
                 </ul>
                 <ul className="side-menu">
-                    <li>
-                        <a href="#">
-                            <BiSolidCog />
-                            <span className="text">Configurações</span>
-                        </a>
-                    </li>
                     <li>
                         <a href="/" className="logout">
                             <CiLogout />
@@ -231,8 +217,9 @@ function Dashboard() {
                                     <a href="#">Dashboard</a>
                                 </li>
                                 <li><RiArrowRightSLine /></li>
+
                                 <li>
-                                    <a className="active" href="#">Home</a>
+                                    <a className="active" href="#">Painel</a>
                                 </li>
                             </ul>
                         </div>
@@ -269,7 +256,7 @@ function Dashboard() {
                     <div className="table-data">
                         <div className="order">
                             <div className="head">
-                                <h3>Recent Orders</h3>
+                                <h3>Acompanhamento de Vendas</h3>
                                 <IoIosSearch />
                                 <IoFilterOutline />
                             </div>
@@ -297,14 +284,21 @@ function Dashboard() {
                                     <p>Desenvolver Sabores</p>
                                     <LuMoreVertical />
                                 </li>
+                                <li className="completed">
+                                    <p>Contagem de Produtos</p>
+                                    <LuMoreVertical />
+                                </li><li className="completed">
+                                    <p>Atualizar Sistema</p>
+                                    <LuMoreVertical />
+                                </li>
                             </ul>
                         </div>
                         <div className="todo">
                             <div className="head">
-                                <h3>Controle de Vendas</h3>
+                                <h3>Registro de Vendas</h3>
                             </div>
                             <ul className="todo-list">
-                                <TabelaHistoricoClientes />
+                                <RegistroVendas />
                             </ul>
                         </div>
 
